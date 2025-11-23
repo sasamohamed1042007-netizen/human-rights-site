@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Rights | Horus University</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b1e3b;
+    --card: #0f2950;
+    --accent: #00e5ff;
+    --text: #e6f7ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  header {
+    background: linear-gradient(135deg, #0b1e3b, #09162d);
+    text-align: center;
+    padding: 160px 20px;
+  }
+  header h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    animation: fadeUp 1.3s ease-out;
+  }
+  header p {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #b8e6ff;
+  }
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  nav {
+    background: rgba(11,30,59,0.98);
+    position: sticky; top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent);
+  }
+  nav ul{ display:flex; justify-content:center; list-style:none; }
+  nav a {
+    padding: 20px 35px;
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  nav a:hover { color: black; background: var(--accent); }
+
+  .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(430px,1fr));
+    gap: 50px;
+  }
+  .card {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0,229,255,0.3);
+  }
+  .section-title { text-align:center; color:var(--accent); font-size:2.4rem; font-weight:800; margin-bottom:20px; }
+  .row { display:flex; gap:25px; flex-wrap:wrap; align-items:center; }
+  .row img { width:48%; border-radius:15px; }
+  .text { width:48%; }
+  footer {
+    background: #061222;
+    text-align:center;
+    padding: 40px;
+    color:#77a8c9;
+    margin-top:60px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Human Rights</h1>
+  <p>Understanding freedom, equality, dignity, and justice for all individuals.</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#udhr">Declaration</a></li>
+    <li><a href="#topics">Topics</a></li>
+    <li><a href="#lectures">Lectures</a></li>
+  </ul>
+</nav>
+
+<div style="text-align:center; padding:20px;">
+  <button id="themeToggle" style="padding:12px 25px; background:var(--accent); color:black; font-weight:700; border:none; border-radius:10px; cursor:pointer; font-size:1rem;">Change Theme</button>
+</div>
+<script>
+  const themes = [
+    {bg:'#0b1e3b', card:'#0f2950', accent:'#00e5ff', text:'#e6f7ff'},
+    {bg:'#1a1a1a', card:'#2e2e2e', accent:'#ffcc00', text:'#ffffff'},
+    {bg:'#002b36', card:'#073642', accent:'#2aa198', text:'#eee8d5'}
+  ];
+  document.getElementById('themeToggle').onclick = () => {
+    const t = themes[Math.floor(Math.random()*themes.length)];
+    document.documentElement.style.setProperty('--bg', t.bg);
+    document.documentElement.style.setProperty('--card', t.card);
+    document.documentElement.style.setProperty('--accent', t.accent);
+    document.documentElement.style.setProperty('--text', t.text);
+  };
+</script>
+
+<div class="container">
+
+  <section id="intro" class="card">
+    <h2 class="section-title">What Are Human Rights?</h2>
+    <div class="row">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+      <div class="text">
+        <p>Human rights are the universal rights and freedoms entitled to every human being regardless of race, nationality, gender, or religion. They include the right to life, dignity, equality, thought, expression, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="history" class="card">
+    <h2 class="section-title">A Brief History</h2>
+    <div class="row">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" />
+      <div class="text">
+        <p>Human rights evolved through struggle across centuries. One milestone was the <strong>Petition of Right (1628)</strong> which limited the monarchy's power and shaped early civil liberties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="udhr" class="card">
+    <h2 class="section-title">Universal Declaration</h2>
+    <div class="row">
+      <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479" />
+      <div class="text">
+        <p>The Universal Declaration of Human Rights affirms dignity, equality, justice and freedom for all humans. It outlines rights such as movement, expression, nationality, work, and education.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="card">
+    <h2 class="section-title">Course Topics</h2>
+    <div class="row">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" />
+      <div class="text">
+        <ul>
+          <li>Introduction to Human Rights</li>
+          <li>History of Rights Evolution</li>
+          <li>International Law & UN Framework</li>
+          <li>Freedom & Equality</li>
+          <li>Women and Children Rights</li>
+          <li>Global Justice & Case Studies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="lectures" class="card">
+    <h2 class="section-title">Lectures</h2>
+
+    <div class="row" style="background:#0e325f; padding:25px; border-radius:15px; margin-bottom:25px;">
+      <div class="text" style="width:100%;">
+        <h3><a href="/mnt/data/Human Rights lec.1.pdf" target="_blank" style="color:var(--accent); text-decoration:underline;">Lecture 1: Definition of Human Rights</a></h3>
+        <p>Human rights are the basic freedoms and entitlements that belong to every person simply for being human. These include the right to life, dignity, equality, freedom of expression, and protection from discrimination. They ensure that every individual can make life choices freely and live with respect.</p>
+      </div>
+    </div>
+
+    <div class="row" style="background:#0e325f; padding:25px; border-radius:15px; margin-bottom:25px;">
+      <div class="text" style="width:100%;">
+        <h3><a href="/mnt/data/Human rights (Third Lecture)  (3).pdf" target="_blank" style="color:var(--accent); text-decoration:underline;">Lecture 2: Historical Development of Human Rights</a></h3>
+        <p>The evolution of human rights spans centuries. A major milestone was the <strong>Petition of Right (1628)</strong>, issued by the English Parliament. It established key principles including no taxation without representation, no imprisonment without cause, and prohibiting forced housing of soldiers—laying early foundations for modern human rights standards.</p>
+      </div>
+    </div>
+
+    <div class="row" style="background:#0e325f; padding:25px; border-radius:15px; margin-bottom:25px;">
+      <div class="text" style="width:100%;">
+        <h3><a href="/mnt/data/Human rights (fifth Lecture) (2).pdf" target="_blank" style="color:var(--accent); text-decoration:underline;">Lecture 3: Key Articles from the Universal Declaration</a></h3>
+        <ul>
+          <li><strong>Article 13:</strong> Freedom of movement and the right to leave and return to one’s country.</li>
+          <li><strong>Article 15:</strong> The right to nationality and protection against arbitrary loss of citizenship.</li>
+          <li><strong>Article 17:</strong> The right to own property individually or collectively.</li>
+          <li><strong>Article 19:</strong> Freedom of opinion, expression, and access to information.</li>
+          <li><strong>Article 20:</strong> Freedom of peaceful assembly and association.</li>
+          <li><strong>Article 21:</strong> Political participation and free elections.</li>
+          <li><strong>Article 23:</strong> The right to work, fair conditions, and equal pay.</li>
+          <li><strong>Article 24:</strong> The right to rest and reasonable working hours.</li>
+          <li><strong>Article 26:</strong> The right to education, especially free elementary education.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  © 2025 Horus University – Designed by Mostafa
+</footer>
+</body>
+</html>
