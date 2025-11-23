@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Rights | Horus University</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b1e3b;
+    --card: #0f2950;
+    --accent: #00e5ff;
+    --text: #e6f7ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  header {
+    background: linear-gradient(135deg, #0b1e3b, #09162d);
+    text-align: center;
+    padding: 160px 20px;
+  }
+  header h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    animation: fadeUp 1.3s ease-out;
+  }
+  header p {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #b8e6ff;
+  }
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  nav {
+    background: rgba(11,30,59,0.98);
+    position: sticky; top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent);
+  }
+  nav ul{ display:flex; justify-content:center; list-style:none; }
+  nav a {
+    padding: 20px 35px;
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  nav a:hover { color: black; background: var(--accent); }
+
+  .container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(430px,1fr));
+    gap: 50px;
+  }
+  .card {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0,229,255,0.3);
+  }
+  .section-title { text-align:center; color:var(--accent); font-size:2.4rem; font-weight:800; margin-bottom:20px; }
+  .row { display:flex; gap:25px; flex-wrap:wrap; align-items:center; }
+  .row img { width:48%; border-radius:15px; }
+  .text { width:48%; }
+  footer {
+    background: #061222;
+    text-align:center;
+    padding: 40px;
+    color:#77a8c9;
+    margin-top:60px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Human Rights</h1>
+  <p>Understanding freedom, equality, dignity, and justice for all individuals.</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#udhr">Declaration</a></li>
+    <li><a href="#topics">Topics</a></li>
+    <li><a href="#lectures">Lectures</a></li>
+  </ul>
+</nav>
+
+<div style="text-align:center; padding:20px;">
+  <button id="themeToggle" style="padding:12px 25px; background:var(--accent); color:black; font-weight:700; border:none; border-radius:10px; cursor:pointer; font-size:1rem;">Change Theme</button>
+</div>
+<script>
+  const themes = [
+    {bg:'#0b1e3b', card:'#0f2950', accent:'#00e5ff', text:'#e6f7ff'},
+    {bg:'#1a1a1a', card:'#2e2e2e', accent:'#ffcc00', text:'#ffffff'},
+    {bg:'#002b36', card:'#073642', accent:'#2aa198', text:'#eee8d5'}
+  ];
+  document.getElementById('themeToggle').onclick = () => {
+    const t = themes[Math.floor(Math.random()*themes.length)];
+    document.documentElement.style.setProperty('--bg', t.bg);
+    document.documentElement.style.setProperty('--card', t.card);
+    document.documentElement.style.setProperty('--accent', t.accent);
+    document.documentElement.style.setProperty('--text', t.text);
+  };
+</script>
+
+<div class="container">
+  <!-- CONTENT REMOVED FOR BREVITY IN THIS EXAMPLE -->
+</div>
+
+<footer>
+  © 2025 Horus University – Designed by Mostafa
+</footer>
+</body>
+</html>
